@@ -8,10 +8,6 @@ import {
   registerUser
 } from "../services/index.js";
 
-const setAuthCookies = (res, { accessToken, refreshToken }) => {
-  res.cookie("accessToken", accessToken, accessTokenCookieOptions());
-  res.cookie("refreshToken", refreshToken, refreshTokenCookieOptions());
-};
 
 const clearAuthCookies = (res) => {
   res.clearCookie("accessToken", accessTokenCookieOptions());
